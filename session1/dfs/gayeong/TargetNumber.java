@@ -1,4 +1,4 @@
-package bfs.gayeong;
+package dfs.gayeong;
 
 public class TargetNumber {
     private int count = 0;
