@@ -1,4 +1,5 @@
-class Solution {
+package dfs.chaeyeon;
+class TargetNumber {
     static int cnt = 0;
 
     public int solution(int[] numbers, int target) {
