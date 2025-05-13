@@ -1,6 +1,7 @@
+package dfs.chaeyeon;
 import java.util.*;
 
-class Solution {
+class ElectricityDivider {
     static ArrayList<Integer>[] graph;
     static boolean[] visited;
 

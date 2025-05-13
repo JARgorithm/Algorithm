@@ -1,6 +1,7 @@
+package bfs.chaeyeon;
 import java.util.*;
 
-class Solution {
+class WordConversion {
     public int solution(String begin, String target, String[] words) {
         boolean[] visited = new boolean[words.length];
         Queue<Node> queue = new LinkedList<>();

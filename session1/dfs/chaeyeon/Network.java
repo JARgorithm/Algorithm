@@ -1,4 +1,6 @@
-class Solution {
+package dfs.chaeyeon;
+
+class Network {
     static int cnt = 0;
     static boolean[] visited;
 
