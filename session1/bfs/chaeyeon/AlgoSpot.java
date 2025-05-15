@@ -20,8 +20,8 @@ public class AlgoSpot {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        N = sc.nextInt();
         M = sc.nextInt();
+        N = sc.nextInt();
         sc.nextLine();
         map = new int[N][M];
         distatnce = new int[N][M];
