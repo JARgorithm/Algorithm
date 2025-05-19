@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Timemachine {
     static int n, m;
     static ArrayList<Edge> graph;
-    static int[] distance;
+    static long[] distance;
 
     static class Edge {
         int from, to, weight;
@@ -27,7 +27,7 @@ public class Timemachine {
         n = Integer.parseInt(line[0]);
         m = Integer.parseInt(line[1]);
         graph = new ArrayList<>();
-        distance = new int[n + 1];
+        distance = new long[n + 1];
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[1] = 0;
 
