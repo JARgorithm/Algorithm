@@ -1,4 +1,4 @@
-package week2.bellman_ford;
+package week2.bellman_ford.gayeong;
 
 import java.io.BufferedReader;
 import java.io.IOException;
