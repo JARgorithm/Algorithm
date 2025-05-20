@@ -49,14 +49,13 @@ public class Taxi {
 
         //시작 정점으로부터 모든 정점까지의 비용 계산
         dijkstra(s, midDistance);
+        dijkstra(a, aDistance);
+        dijkstra(b, bDistance);
 
         int result = INF;
-        for (int i = 1; i < n + 1; i++) {
-            //같이 탄 지점부터 각자 집으로 가는 비용 계산
-            dijkstra(i, aDistance);
-            dijkstra(i, bDistance);
-
-            result = Math.min(result, midDistance[i] + aDistance[a] + bDistance[b]);
+        for (int i = 1; i <= n; i++) {
+            if (midDistance[i] == INF || aDistance[i] == INF || bDistance[i] == INF) continue;
+            result = Math.min(result, midDistance[i] + aDistance[i] + bDistance[i]);
         }
 
         return result;
