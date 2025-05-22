@@ -12,7 +12,7 @@ public class ParticularShortestPath {
         }
     }
 
-    static final int INF = Integer.MAX_VALUE;
+    static final int INF = 200_000_000;
     static List<List<Node>> graph = new ArrayList<>();
 
 
