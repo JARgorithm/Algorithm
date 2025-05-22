@@ -38,7 +38,7 @@ public class TimeMachine {
             edges[i] = new Edge(from, to, cost);
         }
 
-        boolean updated = false;
+        boolean updated;
 
         for (int i = 1; i <= N; i++) {
             updated = false;

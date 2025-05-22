@@ -60,7 +60,7 @@ public class WormHole {
             for(Edge edge : edges){
                 if( dist[edge.to] > dist[edge.from] + edge.cost){
                     dist[edge.to] = dist[edge.from] +edge.cost;
-                    if (i==n){
+                    if (i==n){ // n번째에도 갱신 발생 → 음수 사이클 존재
                         return true;
                     }
                 }
