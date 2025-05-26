@@ -15,7 +15,7 @@ public class AlmostShortest {
 
     static int n,m,s,d;
     static List<Node>[] graph;
-    static List<Integer>[] prevNodes;
+    static List<Integer>[] prevNodes; //역추적용 -> 이전 정점들의 리스트
     static int[] dist;
 
     public static void main(String[] args) {
@@ -77,7 +77,7 @@ public class AlmostShortest {
                         prevNodes[next.to].add(current.to);
                     }
                 }
-                else if(newCost == dist[next.to] && prevNodes !=null){
+                else if(newCost == dist[next.to] && prevNodes !=null){ //같은 최단 거리 경로가 여러개일 경우
                     prevNodes[next.to].add(current.to);
                 }
             }
