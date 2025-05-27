@@ -9,19 +9,17 @@ public class FindPrime {
     public int findPrime(String numbers) {
         visited = new boolean[numbers.length()];
         dfs(numbers, "",0);
-
-        int cnt = 0;
-        for(int num : result){
-            if (isPrime(num))
-                cnt++;
-        }
-        return cnt;
+        
+        return result.size();
 
     }
 
     public void dfs(String numbers, String num, int depth){
         if (!num.isEmpty()){
-            result.add(Integer.parseInt(num));
+            int value = Integer.parseInt(num);
+            if (isPrime(value)) {
+                result.add(value);
+            }
         }
 
         if(depth == numbers.length())
