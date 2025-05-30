@@ -9,7 +9,7 @@ public class FindPrime {
     public int findPrime(String numbers) {
         visited = new boolean[numbers.length()];
         dfs(numbers, "",0);
-        
+
         return result.size();
 
     }
