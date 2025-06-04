@@ -7,6 +7,7 @@ public class Cheese {
     static int m;
     static int[][] map;
     static boolean[][] visited;
+    static int  time = 0;
     static int[] dx = {-1,1,0,0};
     static int[] dy = {0,0,-1,1};
 
@@ -22,7 +23,6 @@ public class Cheese {
             }
         }
 
-        int time = 0;
         while(true){
 
             for (int i = 0; i < n; i++) {
