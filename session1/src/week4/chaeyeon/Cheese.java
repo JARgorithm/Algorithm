@@ -24,6 +24,15 @@ public class Cheese {
 
         int time = 0;
         while(true){
+
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    if (map[i][j] == -1) {
+                        map[i][j] = 0;
+                    }
+                }
+            }
+
             visited = new boolean[n][m];
             bfs();
 
@@ -35,7 +44,16 @@ public class Cheese {
                     }
                 }
             }
+
+            if(melt.isEmpty())
+                break;
+
+            for(int[] pos : melt){
+                map[pos[0]][pos[1]] = 0;
+            }
+            time++;
         }
+        System.out.println(time);
     }
 
     public static void bfs(){
