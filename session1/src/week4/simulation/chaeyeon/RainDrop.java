@@ -1,4 +1,4 @@
-package week4.chaeyeon;
+package week4.simulation.chaeyeon;
 
 import java.util.Scanner;
 
