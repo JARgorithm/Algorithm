@@ -1,4 +1,4 @@
-package week5.dynamic_programming.gayeong;
+package week5.gayeong;
 
 import java.io.BufferedReader;
 import java.io.IOException;

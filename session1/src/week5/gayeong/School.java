@@ -1,4 +1,4 @@
-package week5.chaeyeon.dp.gayeong;
+package week5.gayeong;
 
 public class School {
     public int solution(int m, int n, int[][] puddles) {
