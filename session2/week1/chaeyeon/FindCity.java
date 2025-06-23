@@ -1,9 +1,6 @@
 package week1.chaeyeon;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Scanner;
+import java.util.*;
 
 public class FindCity {
     static int n;
@@ -43,15 +40,20 @@ public class FindCity {
         Arrays.fill(distance, Integer.MAX_VALUE);
         dijkstra(x);
 
-        boolean found = false;
+
+        List<Integer> result = new ArrayList<>();
         for(int i=1; i<=n;i++){
             if(distance[i] == k){
-                System.out.println(i);
-                found = true;
+                result.add(i);
             }
         }
-        if(!found){
+        if(result.isEmpty()){
             System.out.println(-1);
+        }
+        else{
+            for(int i : result){
+                System.out.println(i);
+            }
         }
 
     }
