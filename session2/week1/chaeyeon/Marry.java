@@ -43,20 +43,16 @@ public class Marry {
                 cnt++;
             }
 
-            if(depth>=3)
-                break;
-
-            for(int next : graph.get(person)){
-                if(!visited[next]){
-                    visited[next] = true;
-                    queue.offer(new int[]{next, depth+1});
+            if (depth < 2) {
+                for (int next : graph.get(person)) {
+                    if (!visited[next]) {
+                        visited[next] = true;
+                        queue.offer(new int[]{next, depth + 1});
+                    }
                 }
             }
 
         }
-
-
-
      }
 
 }
