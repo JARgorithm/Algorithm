@@ -29,13 +29,12 @@ public class Corner {
             graph[i] = new ArrayList<>();
 
 
-
         for(int i=0; i<M;i++){
             int from = sc.nextInt();
             int to = sc.nextInt();
             int cost = sc.nextInt();
             edges.add(new Edge(from,to,cost));
-            graph[from].add(to);
+            graph[from].add(to); //BFS용 그래프
         }
 
         long[] dist = new long[N+1];
@@ -53,7 +52,7 @@ public class Corner {
                     dist[e.to] = dist[e.from]+e.cost;
                     prev[e.to] = e.from;
 
-                    if(i ==N){
+                    if(i ==N){ // i == N일 때 갱신된다면 => 사이클 가능성 존재
                         updatedNodes.add(e.to);
                     }
                 }
@@ -95,13 +94,14 @@ public class Corner {
 
 
         List<Integer> path = new ArrayList<>();
-        int current = N;
+        int current = N; //역으로 가는 것
         while(current!=0){
             path.add(current);
             current = prev[current];
-
         }
+
         Collections.reverse(path);
+
         for (int node : path) {
             System.out.print(node + " ");
         }
