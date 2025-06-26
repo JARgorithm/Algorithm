@@ -1,4 +1,4 @@
-package week1;
+package week1.chaeyeon;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -47,7 +47,7 @@ public class Tomato {
 
     public static void bfs(Queue<int[]> queue){
         while(!queue.isEmpty()){
-            int size = queue.size(); //현재 레벨에서 처리할 노드 수!
+            int size = queue.size(); //현재 레벨에서 처리할 노드 수! -> 현재 큐에 들어있는 만큼 상하좌우 토마토 익게 확장시켜야 하니까!
             
             for(int i=0; i<size;i++){
                 int[] current = queue.poll();
@@ -66,7 +66,7 @@ public class Tomato {
                     }
                 }
             }
-            if(!queue.isEmpty())
+            if(!queue.isEmpty()) //현재 날짜에서 처리할 토마토는 다 끝냈고 + 다음 날짜에 처리할게 남아있다면 -> cnt 증가
                 cnt++;
         }
     }
