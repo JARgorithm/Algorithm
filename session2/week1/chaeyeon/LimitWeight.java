@@ -64,7 +64,7 @@ public class LimitWeight {
                 int nextNode = next.to;
                 int weightLimit = Math.min(maxWeight[now], next.weight);
 
-                if(maxWeight[nextNode] < weightLimit){
+                if (maxWeight[nextNode] < weightLimit){
                     maxWeight[nextNode] = weightLimit;
                     pq.offer(new Node(nextNode, weightLimit));
                 }
