@@ -23,7 +23,7 @@ public class Operation {
             oper[i] = sc.nextInt();
         }
 
-        backtrack(1, num[0]);
+        backtrack(1, num[0]); //num[0] : 현재까지 계산한 결과값
         System.out.println(max);
         System.out.println(min);
 
@@ -63,7 +63,7 @@ public class Operation {
                 }
 
                 backtrack(index + 1, nextResult);
-                oper[i]++; // 연산자 개수 복구
+                oper[i]++; //백트래킹
             }
         }
     }
