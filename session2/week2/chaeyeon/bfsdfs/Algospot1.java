@@ -14,7 +14,7 @@ public class Algospot1 {
         Scanner sc = new Scanner(System.in);
         int m = sc.nextInt();
         int n = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine();
 
         int[][] map = new int[n][m];
 
@@ -50,7 +50,7 @@ public class Algospot1 {
 
                 if (dist[nx][ny] > dist[x][y] + cost) {
                     dist[nx][ny] = dist[x][y] + cost;
-                    if (cost == 0) {
+                    if (cost == 0) { //빈벽으로 이동 가능하니까
                         deque.addFirst(new int[]{nx, ny});
                     } else {
                         deque.addLast(new int[]{nx, ny});
